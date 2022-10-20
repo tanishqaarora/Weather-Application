@@ -27,8 +27,7 @@ app.get('/', (req, res) => {
             const weatherData = JSON.parse(data);
             const temp = weatherData.main.temp;
             const description = weatherData.weather[0].description;
-            // res.write('<h1>The temperature in Jalandhar is: ' + temp + ' degree celcius</h1>');
-            // res.write('<p>The weather description is: ' + description + '</p>');
+        
             res.send({
                 temperature: temp,
                 description: description
