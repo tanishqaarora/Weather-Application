@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 const https = require('https');
 const cors = require('cors');
 
@@ -37,4 +38,4 @@ app.get('/', (req, res) => {
     });
 })
 
-app.listen(3003, () => console.log('Server is running...'));
+app.listen(port, () => console.log('Server is running on port: ', port));
